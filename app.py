@@ -46,7 +46,7 @@ def app_nexus():
 
     texto = ""
     if request.method == "POST":
-        produto = request.form["produto"]
+        produto = request.form.get("produto", "")
         loja = request.form["loja"]
         preco_normal = request.form["preco_normal"]
         preco_promocional = request.form["preco_promocional"]
