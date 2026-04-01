@@ -3,7 +3,7 @@ import json
 import os
 
 app = Flask(__name__)
-app.secret_key = "nexuslink_secret"
+app.secret_key = os.environ.get("SECRET_KEY", "nexuslink_secret")
 
 # arquivo de usuários
 USUARIOS_FILE = "usuarios.json"
