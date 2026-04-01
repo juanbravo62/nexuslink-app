@@ -176,7 +176,7 @@ button:hover { transform: scale(1.03); }
 
     <h2>Acessar Plataforma</h2>
 
-    <form method="POST" onsubmit="animarSaida()">
+    <form method="POST" onsubmit="animarSaida(event)">
         <input type="text" name="usuario" placeholder="Usuário" required>
         <input type="password" name="senha" placeholder="Senha" required>
         <button>Entrar</button>
@@ -199,7 +199,7 @@ button:hover { transform: scale(1.03); }
 </div>
 
 <script>
-function animarSaida() {
+function animarSaida(event) {
     event.preventDefault();
 
     const container = document.querySelector('.login-container');
