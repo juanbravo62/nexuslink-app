@@ -6,7 +6,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "nexuslink_secret")
 
 # arquivo de usuários
-USUARIOS_FILE = "usuarios.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+USUARIOS_FILE = os.path.join(BASE_DIR, "usuarios.json")
 
 def carregar_usuarios():
     try:
