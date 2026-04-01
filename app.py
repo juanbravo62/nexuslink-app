@@ -13,7 +13,8 @@ def carregar_usuarios():
     try:
         with open(USUARIOS_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except Exception as e:
+        print("ERRO AO CARREGAR USUARIOS:", e)
         return []
 
 # LOGIN
